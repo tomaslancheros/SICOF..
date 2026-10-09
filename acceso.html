@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ingresar | SICOF</title><meta name="robots" content="noindex">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css"></head>
+<body>
+<header class="top"><div class="wrap"><a class="brand" href="acceso.html"><img src="logo.jpeg" alt="SICOF"></a></div></header>
+<main class="wrap"><section class="gate" style="margin:5vh auto;max-width:460px">
+  <h1 style="font-size:1.6rem;color:var(--navy);margin:0 0 4px">Bienvenido a SICOF</h1>
+  <p class="sub">Regístrate una vez y luego inicia sesión. Entrarás a la tienda o al panel según tu tipo de cuenta.</p>
+  <div class="chips" style="justify-content:center;margin-bottom:16px" role="tablist">
+    <button class="chip" id="tlogin" data-v="login" aria-pressed="true" role="tab">Iniciar sesión</button>
+    <button class="chip" id="treg" data-v="reg" aria-pressed="false" role="tab">Registrarme</button>
+  </div>
+  <form id="floginf" novalidate>
+    <label>Correo<input id="lmail" type="email" autocomplete="username"></label>
+    <label>Contraseña<input id="lpass" type="password" autocomplete="current-password"></label>
+    <button class="btn sec" type="submit">Entrar</button>
+  </form>
+  <form id="fregf" novalidate hidden>
+    <label>Nombre completo<input id="rn" autocomplete="name"></label>
+    <label>Correo<input id="rm" type="email" autocomplete="email"></label>
+    <label>Tipo de cuenta<select id="rrol"><option value="cliente">Cliente</option><option value="admin">Administrador</option></select></label>
+    <label id="rcw" hidden>Código de administrador<input id="rcode" type="password" autocomplete="off"></label>
+    <label>Contraseña (mín. 8)<input id="rp1" type="password" autocomplete="new-password"></label>
+    <label>Repite la contraseña<input id="rp2" type="password" autocomplete="new-password"></label>
+    <button class="btn sec" type="submit">Crear cuenta</button>
+  </form>
+  <p class="msg" id="amsg" role="status"></p>
+</section></main>
+<footer>© 2026 SICOF · Compras sin filas</footer>
+<script src="common.js"></script><script src="acceso.js"></script>
+</body></html>

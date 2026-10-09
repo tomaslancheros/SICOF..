@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SICOF | Compra en el supermercado sin filas</title>
+<meta name="description" content="SICOF: arma tu compra, paga desde el celular y recógela sin hacer fila.">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css"></head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="index.html"><img src="logo.jpeg" alt="SICOF"></a>
+  <nav class="main" aria-label="Principal">
+    <a href="#catalogo">Productos</a><a href="#resenas">Reseñas</a>
+    <span id="quien" style="padding:8px 4px;color:var(--muted)"></span><button class="lnk" id="navout">Salir</button>
+    <button class="lnk cartbtn" id="cartopen">Carrito (<span id="cn">0</span>)</button>
+  </nav></div></header>
+<section class="hero"><div class="wrap">
+  <nav class="crumbs" aria-label="Ruta de navegación"><ol id="crumbs"><li><a href="index.html">Inicio</a></li></ol></nav>
+  <h1>Tu mercado <span class="typed" id="typed" aria-live="polite"></span></h1>
+  <p id="hola">Arma tu lista, paga desde el celular y recoge tu compra sin hacer fila. Todos los precios en pesos colombianos.</p>
+  <a class="btn" href="#catalogo">Empezar mi compra</a><a class="btn alt" href="#resenas">Ver reseñas</a>
+</div></section>
+<main class="wrap">
+  <section class="block" id="catalogo">
+    <h2>Productos</h2><p class="sub">Elige lo que necesitas y agrégalo al carrito.</p>
+    <div class="tools"><div class="chips" id="chips"></div><input id="psearch" type="search" placeholder="Buscar producto" aria-label="Buscar producto"></div>
+    <div class="cards" id="cards"></div>
+  </section>
+  <section class="block" id="resenas">
+    <h2>Reseñas de clientes</h2><p class="sub" id="ravg"></p><div id="rlist"></div>
+    <form class="grid" id="rform" novalidate>
+      <label>Tu nombre<input id="rname" maxlength="40" required></label>
+      <label>Calificación<select id="rstars"><option value="5">5 estrellas</option><option value="4">4 estrellas</option><option value="3">3 estrellas</option><option value="2">2 estrellas</option><option value="1">1 estrella</option></select></label>
+      <label style="grid-column:1/-1">Tu experiencia<textarea id="rtext" rows="3" maxlength="300" required></textarea></label>
+      <div><button class="btn sec" type="submit">Publicar reseña</button></div>
+    </form><p class="msg" id="rmsg" role="status"></p>
+  </section>
+</main>
+<dialog id="cart"><div class="in">
+  <h2>Tu carrito</h2><div id="clines"></div>
+  <p class="total">Total: <span id="ctotal">$0</span></p><p class="msg" id="cmsg" role="status"></p>
+  <button class="btn sec" id="cbuy">Confirmar pedido</button> <button class="btn small" id="cclose">Seguir comprando</button>
+</div></dialog>
+<footer>© 2026 SICOF · Compras sin filas</footer>
+<script src="common.js"></script><script src="app.js"></script>
+</body></html>
