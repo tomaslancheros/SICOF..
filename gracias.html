@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>¡Gracias por registrarte! | SICOF</title>
+<meta name="robots" content="noindex">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="logo" href="index.html">SICOF</a>
+  <nav class="main" aria-label="Principal"><a href="index.html#catalogo">Productos</a><a href="index.html#resenas">Reseñas</a></nav>
+</div></header>
+<main class="wrap">
+  <nav class="crumbs" aria-label="Ruta de navegación"><ol>
+    <li><a href="index.html">Inicio</a></li><li><a href="index.html#registro">Registro</a></li><li aria-current="page">Gracias</li>
+  </ol></nav>
+  <section class="center">
+    <h1 id="titulo" style="font-size:clamp(2rem,6vw,3.2rem);margin:0 0 10px">¡Gracias por registrarte!</h1>
+    <p class="sub" style="max-width:48ch;margin:0 auto 24px">Tu cuenta quedó creada. Ya puedes explorar los productos y comprar sin hacer fila.</p>
+    <a class="btn" href="index.html#catalogo">Ir a los productos</a>
+    <a class="btn sec" style="margin-left:8px" href="index.html#resenas">Dejar una reseña</a>
+  </section>
+</main>
+<footer>© 2026 SICOF · Compras sin filas</footer>
+<script>
+const n = new URLSearchParams(location.search).get("n");
+if (n) document.getElementById("titulo").textContent = "¡Gracias por registrarte, " + n.slice(0, 30) + "!";
+</script>
+</body>
+</html>
